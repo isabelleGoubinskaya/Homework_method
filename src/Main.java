@@ -4,7 +4,7 @@ public class Main {
 
         int year = 2023;
         int currentYear = LocalDate.now().getYear();
-        String OSversion = "ios";
+        int OSversion = 0;
         int distance = 15;
         leapYear(year);
         OSType(currentYear, OSversion);
@@ -21,19 +21,19 @@ public class Main {
         }
     }
 
-    public static void OSType(int clientDeviceYear, String OSversion) {
-        if (OSversion == "ios" && clientDeviceYear < 2015) {
+    public static void OSType(int clientDeviceYear, int OSversion) {
+        if (OSversion == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
 
-        } else if (OSversion == "ios" && clientDeviceYear >= 2015) {
+        } else if (OSversion == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите стандартную версию приложения для iOS по ссылке");
 
         }
 
-        if (OSversion == "android" && clientDeviceYear < 2015) {
+        if (OSversion == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
 
-        } else if (OSversion == "android" && clientDeviceYear >= 2015) {
+        } else if (OSversion == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите стандартную версию приложения для Android по ссылке");
 
         }
